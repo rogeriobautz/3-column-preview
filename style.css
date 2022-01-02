@@ -1,0 +1,113 @@
+:root {
+  --card1-color: hsl(31, 77%, 52%); /*card 1 background & button font color*/
+  --card2-color: hsl(184, 100%, 22%); /*card 2 background & button font color*/
+  --card3-color: hsl(179, 100%, 13%); /*card 3 background & button font color*/
+  --neutral-color1: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+  --neutral-color2: hsl(0, 0%, 95%); /*background, headings, buttons*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--neutral-color2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 15px;
+  font-family: Lexend Deca;
+  font-weight: 400;
+}
+
+.container {
+  margin: 88px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.card {
+  width: 320px;
+  min-height: 442px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 50px;
+  flex-shrink: 0;
+}
+
+.card1 {
+  background-color: var(--card1-color);
+}
+.card2 {
+  background-color: var(--card2-color);
+}
+.card3 {
+  background-color: var(--card3-color);
+}
+
+.logo {
+  height: 40px;
+}
+
+.title {
+  font-size: 40px;
+  font-family: Big Shoulders Display;
+  font-weight: 700;
+  /* letter-spacing: 2.2px; */
+  color: var(--neutral-color2);
+  text-transform: uppercase;
+  margin-top: min(35px);
+  margin-bottom: min(30px);
+}
+
+.description {
+  color: var(--neutral-color1);
+  line-height: 1.6;
+}
+
+.card-button {
+  padding: 15px 33px;
+  border-radius: 50px;
+  background-color: var(--neutral-color2);
+  text-align: center;
+  margin-top: min(28px);
+  border: var(--neutral-color2) 2px solid;
+}
+
+/*.card to be more specific than the color changes below. Even that this is the only one specifying :hover. Other way to fix is to put that hover changes below the others*/
+.card .card-button:hover {
+  background-color: transparent;
+  color: var(--neutral-color2);
+}
+
+.card1 .card-button {
+  color: var(--card1-color);
+}
+.card2 .card-button {
+  color: var(--card2-color);
+}
+.card3 .card-button {
+  color: var(--card3-color);
+}
+
+@media (min-width: 930px) {
+  .container {
+    margin: auto;
+    flex-direction: row;
+  }
+  .card {
+    width: 307px;
+    min-height: 500px;
+  }
+}
